@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+   <link rel="stylesheet" href="style.css">
+   <script src="https://kit.fontawesome.com/398efa689c.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   <title>CountDown App</title>
+</head>
+<body>
+   <div class="container">
+      <div class="notes" id="notes">
+         <div class="notes-header">
+            <h2>Notes</h2>
+            <button id="darkMode"><i class="fa fa-moon"></i></button>
+         </div>
+         <div class="notes-search" id="notesSearch">
+            <input type="text" placeholder="Search your notes" onkeyup="searchNote()" id="notes_search-input">
+         </div>
+         <div class="note-container">
+            <div class="note-content blue" >
+               <h4 class="note-title">Title</h4>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit eum provident, accusantium, atque expedita ullam molestiae unde tempora dignissimos ab non officia sequi pariatur aliquid est possimus deserunt aspernatur repudiandae.</p>
+               <h5 class="note-date">Sun, 16 32</h5>
+            </div>
+   
+            <div class="note-content black orange">
+               <h4 class="note-title">Title</h4>
+               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi, voluptas.</p>
+               <h5 class="note-date">Sun, 16 32</h5>
+            </div>
+         </div>
+         <button class="addNew" id="addNew">
+            <i class="fa-regular fa-plus"></i>
+         </button>
+      </div>
+      <div class="note-page">
+         <div class="note-page_tools">
+            <button class="back-note" id="back-note">
+               <i class="fa fa-angle-left"></i>
+            </button>
+            <button class="save-note" id="save-note">
+               <i class="fa fa-check"></i>
+            </button>
+         </div>
+         <div class="note-page_title">
+            <input type="text" placeholder="Title" id="note-title_input">
+            <h4>Sun, 10:24</h4>
+         </div>
+         <div class="note-page_content">
+            <textarea autofocus></textarea>
+         </div>
+         <div class="note-page_list">
+            <button class="moreBtn">
+               <i class="fa fa-ellipsis"></i>
+            </button>
+            <div class="note-page_list-content down">
+               <ul class="colors" id="colors">
+                  <li>
+                     <button class="blue color"></button>
+                  </li>
+                  <li>
+                     <button class="yellow color"></button>
+                  </li>
+                  <li>
+                     <button class="white color"></button>
+                  </li>
+                  <li>
+                     <button class="pink color">
+                     </button>
+                  </li>
+                  <li>
+                     <button  class="green color"></button>
+                  </li>
+                  <li>
+                     <button class="orange color"></button>
+                  </li>
+                  <li>
+                     <button class="black color-active color"></button>
+                  </li>
+               </ul>
+               <ul class="options">
+                  <li><button id="deleteNote">Delete note</button></li>
+                  <li><button id="copyNote">Make a copy</button></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </div>
+
+
+
+
+
+   <!-- <script src="398efa689c.js"></script> -->
+   <script src="main.js"></script>
+</body>
+</html>
