@@ -1,0 +1,369 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  background-color: #dbe0ea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  overflow: hidden;
+}
+.black {
+  background-color: #171c26;
+}
+
+.blue p,
+.black p {
+  color: #bcc1d4;
+}
+
+.blue .note-title,
+.black .note-title,
+.orange .note-title,
+.yellow .note-title,
+.yellow p,
+.pink .note-title,
+.green .note-title {
+  color: #fff;
+}
+
+.yellow {
+  background-color: #e0be32;
+}
+.blue {
+  background-color: #4e33ff;
+}
+
+.orange p {
+  color: #e3ecff;
+}
+
+.white {
+  background-color: #fff;
+}
+.white .note-title,
+.green .note-title {
+  color: #171c26;
+}
+.white p,
+.green p {
+  color: #929296;
+}
+.white .note-date,
+.green .note-date {
+  color: #171c26 !important;
+}
+.pink {
+  background-color: #ae3b76;
+}
+.green {
+  background-color: #0beaaf;
+}
+.orange {
+  background-color: #fe7745;
+}
+
+.notes,
+.note-page {
+  color: #fff;
+  width: 300px;
+  min-height: 90vh;
+  margin: 20px;
+  height: 647.482px;
+  padding: 1rem;
+  background-color: #0e121b;
+  position: relative;
+  border-radius: 10px;
+}
+
+.notes {
+  position: absolute;
+  /* left: -1000px; */
+  z-index: 1000;
+  transition: left 1s;
+}
+
+.light {
+  background-color: #fff !important;
+  color: #000 !important;
+}
+.light textarea {
+  background-color: #a3abbe !important;
+  color: #000 !important;
+}
+.light .note-page_tools i {
+  color: #000 !important;
+}
+.light .note-page_tools button {
+  box-shadow: -1px 3px 18px 3px #a3abbe !important;
+}
+.light .note-page_list-content {
+  background-color: #000 !important;
+}
+.light .note-page_list-content .options li button {
+  color: #fff !important;
+}
+.light .note-page_list-content .colors li button:hover {
+  border: 4px solid #fff !important;
+}
+.light .moreBtn {
+  color: #fff;
+}
+
+.notes .tools {
+  background-color: #0beaaf;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5rem;
+}
+.notes-search {
+  background-color: #171c26;
+}
+
+.notes .notes-header button {
+  background-color: #fff;
+  color: #171c26;
+  border: none;
+  font-size: 1.5rem;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+.notes-header {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.notes-search input,
+.note-page_title input {
+  width: 80%;
+  padding: 10px 5px;
+  margin: 1rem 0;
+  border: none;
+  color: #fff;
+  outline: none;
+  background-color: #171c26;
+}
+
+.note-page_title input::placeholder {
+  font-size: 1.5rem;
+}
+.note-page_title input {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.note-container {
+  display: grid;
+  grid-template-columns: 126.5px 126.5px;
+  justify-content: space-between;
+  grid-template-rows: max-content;
+  min-height: 77%;
+  /* gap: 15px; */
+}
+.note-content {
+  padding: 10px 10px 30px;
+  border-radius: 10px;
+  color: #dbe0ea;
+  position: relative;
+  /* min-height: 145px; */
+  margin: 1rem 0;
+  height: fit-content;
+  overflow: hidden;
+  cursor: pointer;
+  /* flex: 1; */
+  /* min-width: 0; */
+  transition: transform 0.2s;
+}
+.note-content:hover {
+  transform: scale(1.03);
+}
+
+.note-content h4 {
+  font-size: 16px;
+  margin: 5px 0;
+}
+.note-content p {
+  max-height: 120px;
+  font-size: 12px;
+  /* white-space: nowrap; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.note-content .note-date {
+  position: absolute;
+  color: #fff;
+  font-size: 13px;
+  font-weight: normal;
+  bottom: 5px;
+  right: 10px;
+}
+.notes .addNew {
+  /* background-color: transparent; */
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #4e33ff;
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  position: absolute;
+  bottom: 2rem;
+  right: 1.5rem;
+  box-shadow: -1px 3px 18px 3px #4e33ffcc;
+  cursor: pointer;
+}
+
+button {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  outline: none;
+}
+
+.note-page_tools {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 0 1.5rem;
+}
+.note-page_tools .back-note,
+.note-page_tools .save-note {
+  box-shadow: -1px 3px 18px 3px #4e33ffcc;
+  border: 2px solid #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* .note-page_title {
+  font-weight: ;
+} */
+.note-page_title h4 {
+  font-size: 13px;
+}
+/* .notes .main {
+  width: 100%;
+  height: 100%;
+} */
+
+.note-page_content {
+  width: 100%;
+  min-height: 400px;
+}
+.note-page .note-page_content textarea {
+  min-height: 400px;
+  width: 100%;
+  /* min-height: 100%; */
+  color: #dbe0ea;
+  padding: 1rem 0.5rem;
+  background-color: #171c26;
+  border-radius: 5px;
+  font-size: 15px;
+  outline: none;
+  border: none;
+  resize: none;
+}
+.note-page .note-page_content textarea::-webkit-scrollbar {
+  width: 12px;
+  background-color: #171c26;
+}
+.note-page .note-page_content textarea::-webkit-scrollbar-thumb {
+  background-color: #42464e;
+}
+
+.note-page_list {
+  position: relative;
+  overflow: hidden;
+  /* background-color: #0beaaf; */
+  width: 300px;
+  height: 267px;
+  top: -172px;
+  left: -16px;
+}
+.note-page_list .moreBtn {
+  font-size: 2rem;
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+  color: #fff;
+  /* color: #fff; */
+  z-index: 100;
+  cursor: pointer;
+}
+
+.note-page_list-content {
+  /* display: none; */
+  background-color: #fff;
+  color: #000;
+  width: 300px;
+  height: 250px;
+  position: absolute;
+  left: 0;
+  bottom: 9px;
+  transition: 0.4s;
+  border-radius: 10px;
+}
+.down {
+  bottom: -300px;
+}
+.note-page_list ul {
+  list-style: none;
+  margin: 0rem 0 -1rem;
+}
+.note-page_list-content .colors li button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: border 0.2s;
+}
+.note-page_list-content .colors li button:hover {
+  border: 4px solid #000;
+}
+.color-active {
+  border: 4px solid #929296;
+}
+.note-page_list-content .colors {
+  display: flex;
+
+  justify-content: space-between;
+  padding: 2rem 0.5rem;
+}
+.options li button {
+  color: #000;
+  font-size: 1rem;
+  margin: 0.5rem 0 0;
+  width: 100%;
+  padding: 1rem 1rem;
+  cursor: pointer;
+  text-align: start;
+  transition: background-color 0.3s;
+}
+
+.options li button:hover {
+  background-color: #bcc1d4;
+}
+.options {
+  margin-bottom: 2rem;
+}
